@@ -1,0 +1,2 @@
+# BSquareBlog
+Self Blog
