@@ -1,9 +1,13 @@
+@import "../../../styles.scss";
+
+
 .footer {
-    background: darkgray;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: flex-start;
-    font-weight: bold;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #98b9be;
+    color: #131212;
+    font-size: 20px;
 }
