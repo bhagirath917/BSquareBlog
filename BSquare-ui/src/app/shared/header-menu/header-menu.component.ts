@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-menu',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-menu.component.scss']
 })
 export class HeaderMenuComponent implements OnInit {
-  menuItems = ['Profile', 'Projects', 'Certifications', 'Hobbies', 'Future Projects'];
-  constructor() { }
+  menuItems = ['profile', 'projects', 'certifications', 'hobbies', 'futureProjects'];
+  navigationExtras: NavigationExtras = {
+    state: {
+      home: 'Welcome to my home',
+      profile: 'Welcome to my profile',
+    }
+  };
+  
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateMenu(item: string) {
+    this.router.navigate(['/profile'], this.navigationExtras)
+    // this.router.navigateByUrl('/'+item);
   }
 
 }
